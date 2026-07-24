@@ -1,6 +1,6 @@
 # My Skills
 
-个人 AI Agent 技能库——覆盖**股票量化分析**与**学术论文写作**两大领域。
+个人 AI Agent 技能与协作规则库——覆盖**股票量化分析**、**学术论文写作**与**个人决策校准**。
 
 ---
 
@@ -10,6 +10,9 @@
 |------|------|--------|------|
 | 股票技术分析 | [`finance-skills/`](finance-skills/) | 3 | 缠论 · 四步分析法 · 八句口诀，三层体系 |
 | 学术论文写作 | [`paper-skills/`](paper-skills/) | 1 | AI 痕迹扫描与修正（de-ai-writing） |
+| 个人决策 | [`personal-skills/`](personal-skills/) | 1 | 选择、执行、人际边界、沟通与投资纪律校准 |
+
+根目录的 [`AGENTS.md`](AGENTS.md) 保存跨项目复用的 AI 协作原则。
 
 ---
 
@@ -67,6 +70,14 @@ stock-unified-analysis（统一调度入口）
 
 ---
 
+## personal-skills：个人决策辅助
+
+### syf-decision-system：SYF 处事体系
+
+以个人长期目标和既定原则为决策校准器，用于分析事业发展、论文与项目、执行拖延、人际边界、沟通汇报、情绪内耗和投资纪律。它不会机械套用规则，而会根据事实检查旧规则是否仍然适用。
+
+---
+
 ## 安装
 
 ### Qoder CLI（推荐）
@@ -95,15 +106,18 @@ cp -r finance-skills/stock-technical-analysis ~/.qoder/skills/
 
 ```
 my_skills/
+├── AGENTS.md                    # 跨项目 AI 协作原则
 ├── README.md
 ├── finance-skills/               # 股票技术分析
 │   ├── README.md
 │   ├── stock-unified-analysis/   # 统一调度入口
 │   ├── stock-technical-analysis/ # 四步分析法（战术层）
 │   └── eight-maxims-trading/     # 八句口诀（执行层）
-└── paper-skills/                 # 学术论文写作
+├── paper-skills/                 # 学术论文写作
     ├── README.md
     └── de-ai-writing/            # AI 痕迹扫描与修正
+└── personal-skills/              # 个人决策辅助
+    └── syf-decision-system/
 ```
 
 ---
