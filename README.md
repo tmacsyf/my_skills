@@ -12,6 +12,7 @@
 | 学术论文写作 | [`paper-skills/`](paper-skills/) | 4 | 文件命名、初稿诊断、领域风格、AI 痕迹修正 |
 | 个人工作与决策 | [`personal-skills/`](personal-skills/) | 3 | 第一性原理、科研汇报、个人决策校准 |
 | 内容获取工具 | [`utility-skills/`](utility-skills/) | 1 | 微信公众号文章下载与格式导出 |
+| 第三方固定版本 | [`external-skills/`](external-skills/) | 1 | 以 Git 子模块固定 Academic Research Suite for Codex |
 
 根目录的 [`AGENTS.md`](AGENTS.md) 保存跨项目复用的 AI 协作原则。
 
@@ -103,6 +104,18 @@ stock-unified-analysis（统一调度入口）
 
 ---
 
+## external-skills：第三方 Skill 固定版本
+
+### academic-research-suite
+
+Codex 原生学术研究工作流套件，覆盖深度研究、文献综述、论文写作、同行评审、修改与实验规划。当前通过 Git 子模块固定为 Codex adapter `0.1.22`、ARS `v3.19.0`（上游提交 `f8d6b061`）。
+
+该 Skill 来自 [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex)，不是本仓库原创内容；使用和再分发须遵守 CC BY-NC 4.0 许可证。
+
+克隆本仓库时使用 `git clone --recurse-submodules`；已有副本执行 `git submodule update --init --recursive`。实际 Skill 位于 `external-skills/academic-research-suite/skills/academic-research-suite/`。
+
+---
+
 ## 安装
 
 ### Qoder CLI（推荐）
@@ -152,9 +165,12 @@ my_skills/
 │   ├── principles/
 │   ├── report/
 │   └── syf-decision-system/
-└── utility-skills/               # 内容获取工具
+├── utility-skills/               # 内容获取工具
+│   ├── README.md
+│   └── wechat-article-download-api/
+└── external-skills/              # 带来源和许可证的第三方固定版本
     ├── README.md
-    └── wechat-article-download-api/
+    └── academic-research-suite/
 ```
 
 ---
