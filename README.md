@@ -1,6 +1,6 @@
 # My Skills
 
-个人 AI Agent 技能与协作规则库——覆盖**股票量化分析**、**学术论文写作**与**个人决策校准**。
+个人 AI Agent 技能与协作规则库——覆盖**股票量化分析**、**学术论文写作**、**个人工作与决策**以及**内容获取工具**。
 
 ---
 
@@ -9,8 +9,10 @@
 | 领域 | 目录 | 技能数 | 简介 |
 |------|------|--------|------|
 | 股票技术分析 | [`finance-skills/`](finance-skills/) | 3 | 缠论 · 四步分析法 · 八句口诀，三层体系 |
-| 学术论文写作 | [`paper-skills/`](paper-skills/) | 1 | AI 痕迹扫描与修正（de-ai-writing） |
-| 个人决策 | [`personal-skills/`](personal-skills/) | 1 | 选择、执行、人际边界、沟通与投资纪律校准 |
+| 学术论文写作 | [`paper-skills/`](paper-skills/) | 4 | 文件命名、初稿诊断、领域风格、AI 痕迹修正 |
+| 个人工作与决策 | [`personal-skills/`](personal-skills/) | 3 | 第一性原理、科研汇报、个人决策校准 |
+| 内容获取工具 | [`utility-skills/`](utility-skills/) | 1 | 微信公众号文章下载与格式导出 |
+| 第三方固定版本 | [`external-skills/`](external-skills/) | 1 | 以 Git 子模块固定 Academic Research Suite for Codex |
 
 根目录的 [`AGENTS.md`](AGENTS.md) 保存跨项目复用的 AI 协作原则。
 
@@ -70,11 +72,47 @@ stock-unified-analysis（统一调度入口）
 
 ---
 
-## personal-skills：个人决策辅助
+## paper-skills：其他论文技能
+
+- **nips-file-naming**：统一 NeurIPS/NIPS 项目中的文件命名。
+- **paper-review-draft**：围绕核心叙事构建提纲并诊断初稿。
+- **topic-modeling-writing-style**：Topic Modeling 领域表达与 NeurIPS 写作规范。
+
+---
+
+## personal-skills：个人工作与决策
 
 ### syf-decision-system：SYF 处事体系
 
 以个人长期目标和既定原则为决策校准器，用于分析事业发展、论文与项目、执行拖延、人际边界、沟通汇报、情绪内耗和投资纪律。它不会机械套用规则，而会根据事实检查旧规则是否仍然适用。
+
+### principles：第一性原理工作准则
+
+在执行前澄清真实目标、检查假设和成功标准；目标清晰但路径低效时，主动提出更短、更可靠的方案。
+
+### report：科研岗向上汇报
+
+把科研进展、成果、问题、资源需求和职业规划整理成简洁版、详细版及成果导向版汇报话术。
+
+---
+
+## utility-skills：内容获取工具
+
+### wechat-article-download-api
+
+通过公开接口下载微信公众号文章，并导出为 HTML、Markdown、纯文本或 JSON。
+
+---
+
+## external-skills：第三方 Skill 固定版本
+
+### academic-research-suite
+
+Codex 原生学术研究工作流套件，覆盖深度研究、文献综述、论文写作、同行评审、修改与实验规划。当前通过 Git 子模块固定为 Codex adapter `0.1.22`、ARS `v3.19.0`（上游提交 `f8d6b061`）。
+
+该 Skill 来自 [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex)，不是本仓库原创内容；使用和再分发须遵守 CC BY-NC 4.0 许可证。
+
+克隆本仓库时使用 `git clone --recurse-submodules`；已有副本执行 `git submodule update --init --recursive`。实际 Skill 位于 `external-skills/academic-research-suite/skills/academic-research-suite/`。
 
 ---
 
@@ -86,10 +124,13 @@ stock-unified-analysis（统一调度入口）
 
 ```bash
 # 安装全部论文技能
-cp -r paper-skills/de-ai-writing ~/.qoder/skills/
+cp -r paper-skills/* ~/.qoder/skills/
 
 # 安装全部股票技能
-cp -r finance-skills/stock-technical-analysis ~/.qoder/skills/
+cp -r finance-skills/* ~/.qoder/skills/
+
+# 安装个人工作与决策技能
+cp -r personal-skills/* ~/.qoder/skills/
 ```
 
 ### Claude Code
@@ -106,7 +147,7 @@ cp -r finance-skills/stock-technical-analysis ~/.qoder/skills/
 
 ```
 my_skills/
-├── AGENTS.md                    # 跨项目 AI 协作原则
+├── AGENTS.md                     # 跨项目 AI 协作原则
 ├── README.md
 ├── finance-skills/               # 股票技术分析
 │   ├── README.md
@@ -114,10 +155,22 @@ my_skills/
 │   ├── stock-technical-analysis/ # 四步分析法（战术层）
 │   └── eight-maxims-trading/     # 八句口诀（执行层）
 ├── paper-skills/                 # 学术论文写作
+│   ├── README.md
+│   ├── de-ai-writing/
+│   ├── nips-file-naming/
+│   ├── paper-review-draft/
+│   └── topic-modeling-writing-style/
+├── personal-skills/              # 个人工作与决策
+│   ├── README.md
+│   ├── principles/
+│   ├── report/
+│   └── syf-decision-system/
+├── utility-skills/               # 内容获取工具
+│   ├── README.md
+│   └── wechat-article-download-api/
+└── external-skills/              # 带来源和许可证的第三方固定版本
     ├── README.md
-    └── de-ai-writing/            # AI 痕迹扫描与修正
-└── personal-skills/              # 个人决策辅助
-    └── syf-decision-system/
+    └── academic-research-suite/
 ```
 
 ---

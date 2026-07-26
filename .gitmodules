@@ -1,0 +1,4 @@
+[submodule "external-skills/academic-research-suite"]
+	path = external-skills/academic-research-suite
+	url = https://github.com/Imbad0202/academic-research-skills-codex.git
+	branch = main
