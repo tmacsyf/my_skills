@@ -9,6 +9,9 @@
 | 技能 | 目录 | 核心功能 | 触发词 |
 |------|------|----------|--------|
 | **De-AI Writing** | `de-ai-writing/` | 扫描并修正学术论文中的 10 类 AI 写作痕迹 | 去AI味、AI痕迹、humanize |
+| **NIPS File Naming** | `nips-file-naming/` | 统一论文项目文件命名 | 新建文件、重命名、项目整理 |
+| **Paper Review Draft** | `paper-review-draft/` | 构建核心叙事并诊断论文初稿 | 提纲、初稿诊断、主线取舍 |
+| **Topic Modeling Writing Style** | `topic-modeling-writing-style/` | Topic Modeling 术语表达与 NeurIPS 写作规范 | 主题建模、论文润色、NeurIPS |
 
 ---
 
@@ -65,8 +68,8 @@ LLM 辅助写作的论文会留下一系列可被审稿人识别的"指纹"：
 
 ---
 
-## 计划中的技能
+## 其他技能说明
 
-- [ ] **nature-polishing** — 学术论文 Nature 风格润色
-- [ ] **reviewer-response** — 审稿意见逐点回复助手
-- [ ] **lit-review-scan** — 文献综述完整性扫描
+- `nips-file-naming`：通过类型、主题、日期和版本号形成一致的文件命名。
+- `paper-review-draft`：强调“一条主线打透”，用于提纲搭建、支线取舍和初稿诊断。
+- `topic-modeling-writing-style`：沉淀 Topic Modeling 领域惯用表达，并叠加 NeurIPS 写作规范。
