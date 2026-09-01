@@ -1,6 +1,6 @@
-# paper-skills：学术论文写作辅助技能集
+# paper-skills：学术论文写作与投稿辅助技能集
 
-> 让 AI 帮你**检查论文、消除 AI 味、提升学术表达**——而不是让论文读起来更像 AI 写的。
+> 让 AI 帮你**检查论文、消除 AI 味、提升学术表达并核验投稿流程**——而不是替代作者作出学术或投稿决定。
 
 ---
 
@@ -11,6 +11,7 @@
 | **De-AI Writing** | `de-ai-writing/` | 扫描并修正学术论文中的 10 类 AI 写作痕迹 | 去AI味、AI痕迹、humanize |
 | **NIPS File Naming** | `nips-file-naming/` | 统一论文项目文件命名 | 新建文件、重命名、项目整理 |
 | **Paper Review Draft** | `paper-review-draft/` | 构建核心叙事并诊断论文初稿 | 提纲、初稿诊断、主线取舍 |
+| **Science Submission Workflow** | `science-submission-workflow/` | 准备、核验、引导填写并归档 Science CTS 投稿 | Science投稿、CTS、投稿包、Received归档 |
 | **Topic Modeling Writing Style** | `topic-modeling-writing-style/` | Topic Modeling 术语表达与 NeurIPS 写作规范 | 主题建模、论文润色、NeurIPS |
 
 ---
@@ -58,7 +59,23 @@ LLM 辅助写作的论文会留下一系列可被审稿人识别的"指纹"：
 
 ---
 
+## science-submission-workflow：Science CTS 投稿工作流
+
+### 核心功能
+
+- 区分主文、Combined PDF、Cover Letter、补充材料与LaTeX源文件等投稿角色；
+- 从CTS当前页面或截图逐步指导填写；
+- 重点核对作者顺序与角色、机构、Funding、Subject Area及数据仓库选择；
+- 机械检查PDF页数、页面尺寸、可搜索文本、字体嵌入、ZIP完整性与SHA-256；
+- 在显示`Received`后生成保护隐私的不可变投稿快照。
+
+该技能不会擅自修改科研内容、选择审稿人、公开数据、发送邮件、推送Git或执行最终Submit。Science政策和CTS字段可能变化，因此实时系统页面与最新官方指南始终优先。
+
+---
+
 ## 安装
+
+**Codex**：把 `paper-skills/science-submission-workflow/` 复制到 `~/.codex/skills/`，然后在新会话中使用 `$science-submission-workflow`。
 
 **Qoder CLI**：把 `paper-skills/` 下任一技能目录复制到 `~/.qoder/skills/` 或项目的 `.qoder/skills/` 目录。
 
@@ -72,4 +89,5 @@ LLM 辅助写作的论文会留下一系列可被审稿人识别的"指纹"：
 
 - `nips-file-naming`：通过类型、主题、日期和版本号形成一致的文件命名。
 - `paper-review-draft`：强调“一条主线打透”，用于提纲搭建、支线取舍和初稿诊断。
+- `science-submission-workflow`：面向Science CTS的投稿准备、元数据核对、文件验证和归档。
 - `topic-modeling-writing-style`：沉淀 Topic Modeling 领域惯用表达，并叠加 NeurIPS 写作规范。

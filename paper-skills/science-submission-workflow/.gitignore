@@ -1,0 +1,9 @@
+.env
+.env.*
+*.pdf
+*.doc
+*.docx
+*.zip
+submission-profile.local.*
+submission-archive/
+receipts/

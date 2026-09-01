@@ -1,6 +1,6 @@
 # My Skills
 
-个人 AI Agent 技能与协作规则库——覆盖**股票量化分析**、**学术论文写作**、**个人工作与决策**以及**内容获取工具**。
+个人 AI Agent 技能与协作规则库——覆盖**股票量化分析**、**学术论文写作与投稿**、**个人工作与决策**以及**内容获取工具**。
 
 ---
 
@@ -9,7 +9,7 @@
 | 领域 | 目录 | 技能数 | 简介 |
 |------|------|--------|------|
 | 股票技术分析 | [`finance-skills/`](finance-skills/) | 3 | 缠论 · 四步分析法 · 八句口诀，三层体系 |
-| 学术论文写作 | [`paper-skills/`](paper-skills/) | 4 | 文件命名、初稿诊断、领域风格、AI 痕迹修正 |
+| 学术论文写作与投稿 | [`paper-skills/`](paper-skills/) | 5 | 文件命名、初稿诊断、领域风格、AI 痕迹修正、Science CTS 投稿 |
 | 个人工作与决策 | [`personal-skills/`](personal-skills/) | 3 | 第一性原理、科研汇报、个人决策校准 |
 | 内容获取工具 | [`utility-skills/`](utility-skills/) | 1 | 微信公众号文章下载与格式导出 |
 | 第三方固定版本 | [`external-skills/`](external-skills/) | 1 | 以 Git 子模块固定 Academic Research Suite for Codex |
@@ -52,9 +52,9 @@ stock-unified-analysis（统一调度入口）
 
 ---
 
-## paper-skills：学术论文写作辅助
+## paper-skills：学术论文写作与投稿辅助
 
-> 让 AI 帮你**检查论文、消除 AI 味、提升学术表达**——而不是让论文读起来更像 AI 写的。
+> 让 AI 帮你**检查论文、消除 AI 味、提升学术表达并核验投稿流程**——而不是替代作者作出学术或投稿决定。
 
 ### de-ai-writing：AI 痕迹扫描与修正
 
@@ -76,6 +76,7 @@ stock-unified-analysis（统一调度入口）
 
 - **nips-file-naming**：统一 NeurIPS/NIPS 项目中的文件命名。
 - **paper-review-draft**：围绕核心叙事构建提纲并诊断初稿。
+- **science-submission-workflow**：准备、核验、引导填写并归档 Science CTS 初投稿或修订稿；包含投稿包机械核验脚本。
 - **topic-modeling-writing-style**：Topic Modeling 领域表达与 NeurIPS 写作规范。
 
 ---
@@ -118,6 +119,14 @@ Codex 原生学术研究工作流套件，覆盖深度研究、文献综述、�
 
 ## 安装
 
+### Codex
+
+把技能目录复制到 `~/.codex/skills/`，新会话中即可自动发现或用 `$技能名` 调用：
+
+```bash
+cp -r paper-skills/science-submission-workflow ~/.codex/skills/
+```
+
 ### Qoder CLI（推荐）
 
 把任一技能目录复制到 `~/.qoder/skills/`（全局）或项目的 `.qoder/skills/`（项目级）：
@@ -159,6 +168,7 @@ my_skills/
 │   ├── de-ai-writing/
 │   ├── nips-file-naming/
 │   ├── paper-review-draft/
+│   ├── science-submission-workflow/
 │   └── topic-modeling-writing-style/
 ├── personal-skills/              # 个人工作与决策
 │   ├── README.md
@@ -178,4 +188,4 @@ my_skills/
 ## 免责声明
 
 - **股票技能**：仅用于技术研究与学习，**不构成投资建议，不给具体买卖指令，不承诺任何收益**。任何据此产生的盈亏由使用者自负。
-- **论文技能**：辅助写作质量检查，不替代导师/同行的学术审查。
+- **论文技能**：辅助写作质量检查与投稿流程核验，不替代导师/同行的学术审查；期刊政策与字段要求以投稿时的官方指南和实时系统页面为准。

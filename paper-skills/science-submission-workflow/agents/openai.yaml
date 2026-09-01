@@ -1,0 +1,4 @@
+interface:
+  display_name: "Science Submission Workflow"
+  short_description: "Prepare, audit, and archive Science CTS submissions"
+  default_prompt: "Use $science-submission-workflow to prepare and audit my Science CTS submission package."
